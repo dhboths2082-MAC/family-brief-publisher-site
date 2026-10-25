@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>family-brief-publisher</title>
+<style>body{font-family:system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.55}code{background:#f2f2f2;padding:0 .25em}</style></head>
+<body>
+<h1>family-brief-publisher</h1>
+<p><strong>A private, single-user automation tool.</strong> It is not offered to the public and has exactly one user: the individual who built it.
+<br><span lang="ko">개인이 자기 컴퓨터에서만 쓰는 비공개 자동화 도구입니다. 사용자는 개발자 본인 한 명뿐입니다.</span></p>
+
+<h2>What it does</h2>
+<p>The tool runs on the developer's own computer and helps keep the developer's family school-planning notes up to date:</p>
+<ul>
+<li>reads two tabs of a Google Sheet owned by the developer (family input);</li>
+<li>updates ten specific Google Docs owned by the developer (read-only study notes shared with family members);</li>
+<li>checks the sharing settings of those eleven files, so that nothing is ever shared outside the approved family accounts;</li>
+<li>sends one summary email per week from the developer's own Gmail account to the developer's family members, and reads back the message it just sent to confirm it was delivered correctly.</li>
+</ul>
+
+<h2>Why each Google permission is requested</h2>
+<ul>
+<li><code>documents</code> &ndash; update the ten Google Docs listed above.</li>
+<li><code>drive.metadata.readonly</code> &ndash; read only the sharing list of those files (no file content).</li>
+<li><code>spreadsheets.readonly</code> &ndash; read the family input Sheet (never written).</li>
+<li><code>gmail.send</code> &ndash; send the weekly summary email.</li>
+<li><code>gmail.readonly</code> &ndash; read back the sent message and check the Sent folder so the same email is never sent twice.</li>
+</ul>
+
+<h2>Links</h2>
+<p><a href="privacy.html">Privacy policy</a> &middot; <a href="terms.html">Terms of service</a></p>
+<p>Contact: open an issue in this repository.</p>
+</body></html>
